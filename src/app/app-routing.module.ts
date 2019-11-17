@@ -8,6 +8,10 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'lazy',
+    loadChildren: './lazy/lazy.module#LazyModule'
+  },
+  {
     path: '**',
     redirectTo: ''
   }
