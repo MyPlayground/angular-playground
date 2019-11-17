@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: './lazy/lazy.module#LazyModule'
   },
   {
+    path: 'sandbox',
+    loadChildren: './sandbox/sandbox.module#SandboxModule'
+  },
+  {
     path: '**',
     redirectTo: ''
   }
