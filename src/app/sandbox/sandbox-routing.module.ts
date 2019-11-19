@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'city-search',
-    loadChildren: './city-search-page/city-search-page.module#CitySearchPageModule'
+    loadChildren: './pages/city-search-page/city-search-page.module#CitySearchPageModule'
   }
 ];
 

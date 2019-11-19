@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./area-code-list.component.scss']
 })
 export class AreaCodeListComponent implements OnInit {
-  private static AREA_CODE_LIST = [
+  private static readonly AREA_CODE_LIST = [
     [
       {
         code: '01',
