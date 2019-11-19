@@ -6,16 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./area-code-list.component.scss']
 })
 export class AreaCodeListComponent implements OnInit {
-  private static readonly AREA_CODE_LIST = [
-    [
-      {
-        code: '01',
-        japanese: '北海道',
-        english: 'Hokkaido'
-      }
-    ]
-  ];
-
   items: string[] = ['aaa', 'bbb', 'ccc'];
 
   constructor() {}
