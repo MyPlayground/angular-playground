@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
 
+/**
+ * providedIn はサービス側から適用するモジュールを指定する
+ * providers はモジュール/コンポーネント側から注入するサービスを指定する
+ * @see http://neos21.hatenablog.com/entry/2017/07/30/080000
+ */
 @Injectable({
   providedIn: 'root'
 })

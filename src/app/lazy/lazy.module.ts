@@ -1,15 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-import { LazyRoutingModule } from './lazy-routing.module';
 import { LazyPageComponent } from '../lazy/lazy-page/lazy-page.component';
-
+import { LazyRoutingModule } from './lazy-routing.module';
 
 @NgModule({
   declarations: [LazyPageComponent],
-  imports: [
-    CommonModule,
-    LazyRoutingModule
-  ]
+  imports: [LazyRoutingModule]
 })
-export class LazyModule { }
+export class LazyModule {}

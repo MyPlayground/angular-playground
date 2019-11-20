@@ -1,8 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { CitySearchService } from './services/city-search.service';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule]
+  imports: [],
+  providers: [CitySearchService],
+  declarations: []
 })
-export class CoreModule {}
+export class CoreModule {
+  constructor(@Optional() @SkipSelf() core: CoreModule) {
+    if (core) {
+      throw new Error('You should import core module only in the root module');
+    }
+  }
+}
