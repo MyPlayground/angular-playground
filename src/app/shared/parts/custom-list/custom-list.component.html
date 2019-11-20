@@ -1,6 +1,6 @@
 <mat-selection-list role="list" #shoes>
   <ng-container *ngFor="let item of items; last as isLast">
-    <mat-list-option mat-list-item role="listitem" [value]="item">{{ item }}</mat-list-option>
+    <mat-list-option mat-list-item role="listitem" [value]="item.value">{{ item.text }}</mat-list-option>
     <mat-divider *ngIf="isLast === false"></mat-divider>
   </ng-container>
 </mat-selection-list>

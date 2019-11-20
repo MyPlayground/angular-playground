@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { from } from 'rxjs';
+import { of } from 'rxjs';
 
 /**
  * providedIn はサービス側から適用するモジュールを指定する
@@ -13,6 +13,16 @@ export class CitySearchService {
       code: '01',
       japanese: '北海道',
       english: 'Hokkaido'
+    },
+    {
+      code: '01',
+      japanese: '北海道',
+      english: 'Hokkaido'
+    },
+    {
+      code: '01',
+      japanese: '北海道',
+      english: 'Hokkaido'
     }
   ];
 
@@ -21,6 +31,6 @@ export class CitySearchService {
   constructor() {}
 
   getAreaCodeList() {
-    return from(CitySearchService.AREA_CODE_LIST);
+    return of(CitySearchService.AREA_CODE_LIST);
   }
 }

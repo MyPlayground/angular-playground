@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angular/core';
 import { MatSelectionList, MatListOption, MatSelectionListChange } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
+import { CustomListOption } from './custom-list.model';
 
 /**
  * @see https://stackoverflow.com/questions/48277904/angular-mat-selection-list-how-to-make-single-checkbox-select-similar-to-radio/50268504
@@ -14,7 +15,7 @@ export class CustomListComponent implements OnInit {
   @ViewChild(MatSelectionList, { static: true })
   private selectionList: MatSelectionList;
 
-  @Input() items: string[];
+  @Input() items: CustomListOption[];
   @Output() selectionChange: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
