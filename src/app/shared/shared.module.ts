@@ -1,11 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { CustomListModule } from './parts/custom-list/custom-list.module';
+import { CustomModule } from './custom.module';
+import { DefaultModule } from './default.module';
+import { MaterialModule } from './material.module';
 
-const modules = [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule, RouterModule, CustomListModule];
+const modules = [DefaultModule, MaterialModule, CustomModule];
 
 /**
  * @see https://www.tektutorialshub.com/angular/angular-folder-structure-best-practices/

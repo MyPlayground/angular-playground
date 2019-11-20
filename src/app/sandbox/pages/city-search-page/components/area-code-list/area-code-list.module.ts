@@ -1,11 +1,10 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AreaCodeListComponent } from './area-code-list.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { AreaCodeListComponent } from './area-code-list.component';
 
 @NgModule({
   declarations: [AreaCodeListComponent],
-  imports: [CommonModule, SharedModule],
+  imports: [SharedModule],
   exports: [AreaCodeListComponent]
 })
 export class AreaCodeListModule {}
