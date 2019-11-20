@@ -28,6 +28,7 @@ export class AreaCodeListComponent implements OnInit {
   }
 
   onSelectionChange(value: string) {
+    // TODO: サービスへ通知
     console.log(value);
   }
 }

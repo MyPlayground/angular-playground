@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 
 /**
  * providedIn はサービス側から適用するモジュールを指定する
@@ -8,29 +8,10 @@ import { of } from 'rxjs';
  */
 @Injectable()
 export class CitySearchService {
-  private static readonly AREA_CODE_LIST = [
-    {
-      code: '01',
-      japanese: '北海道',
-      english: 'Hokkaido'
-    },
-    {
-      code: '01',
-      japanese: '北海道',
-      english: 'Hokkaido'
-    },
-    {
-      code: '01',
-      japanese: '北海道',
-      english: 'Hokkaido'
-    }
-  ];
+  constructor(private http: HttpClient) {}
 
-  public _value: string;
-
-  constructor() {}
-
+  // http://www.land.mlit.go.jp/webland/api.html
   getAreaCodeList() {
-    return of(CitySearchService.AREA_CODE_LIST);
+    return this.http.get<{ code: string; japanese: string; english: string }[]>('assets/area-code-list.json');
   }
 }
