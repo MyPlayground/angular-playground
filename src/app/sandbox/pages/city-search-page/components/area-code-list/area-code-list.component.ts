@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitySearchService } from 'src/app/core/services/city-search.service';
 
 @Component({
   selector: 'app-area-code-list',
@@ -8,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class AreaCodeListComponent implements OnInit {
   items: string[] = ['aaa', 'bbb', 'ccc'];
 
-  constructor() {}
+  constructor(private service: CitySearchService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(`AreaCodeListComponent: ${this.service._value}`);
+    this.service._value = 'def';
+    console.log(`AreaCodeListComponent: ${this.service._value}`);
+  }
 }

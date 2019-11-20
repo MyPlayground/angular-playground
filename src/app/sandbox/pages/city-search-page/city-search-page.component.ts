@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitySearchService } from 'src/app/core/services/city-search.service';
 
 @Component({
   selector: 'app-city-search-page',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./city-search-page.component.scss']
 })
 export class CitySearchPageComponent implements OnInit {
-  constructor() {}
+  constructor(private service: CitySearchService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(`CitySearchPageComponent: ${this.service._value}`);
+    this.service._value = 'abc';
+    console.log(`CitySearchPageComponent: ${this.service._value}`);
+    this.service.getAreaCodeList().subscribe(value => console.log(value));
+  }
 }

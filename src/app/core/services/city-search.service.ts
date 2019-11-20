@@ -13,6 +13,8 @@ export class CitySearchService {
     }
   ];
 
+  public _value: string;
+
   constructor() {}
 
   getAreaCodeList() {
