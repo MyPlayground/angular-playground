@@ -6,9 +6,7 @@ import { from } from 'rxjs';
  * providers はモジュール/コンポーネント側から注入するサービスを指定する
  * @see http://neos21.hatenablog.com/entry/2017/07/30/080000
  */
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class CitySearchService {
   private static readonly AREA_CODE_LIST = [
     {

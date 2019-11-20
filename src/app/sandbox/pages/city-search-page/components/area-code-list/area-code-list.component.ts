@@ -12,8 +12,6 @@ export class AreaCodeListComponent implements OnInit {
   constructor(private service: CitySearchService) {}
 
   ngOnInit() {
-    console.log(`AreaCodeListComponent: ${this.service._value}`);
-    this.service._value = 'def';
-    console.log(`AreaCodeListComponent: ${this.service._value}`);
+    this.service.getAreaCodeList().subscribe(value => console.log(value));
   }
 }

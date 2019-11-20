@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CitySearchService } from 'src/app/core/services/city-search.service';
 
 @Component({
   selector: 'app-lazy-page',
@@ -7,11 +6,7 @@ import { CitySearchService } from 'src/app/core/services/city-search.service';
   styleUrls: ['./lazy-page.component.scss']
 })
 export class LazyPageComponent implements OnInit {
-  constructor(private service: CitySearchService) {}
+  constructor() {}
 
-  ngOnInit() {
-    console.log(`LazyPageComponent: ${this.service._value}`);
-    this.service._value = 'ghi';
-    console.log(`LazyPageComponent: ${this.service._value}`);
-  }
+  ngOnInit() {}
 }
