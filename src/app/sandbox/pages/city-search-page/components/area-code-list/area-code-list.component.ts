@@ -14,4 +14,8 @@ export class AreaCodeListComponent implements OnInit {
   ngOnInit() {
     this.service.getAreaCodeList().subscribe(value => console.log(value));
   }
+
+  onSelectionChange(value: string) {
+    console.log(value);
+  }
 }

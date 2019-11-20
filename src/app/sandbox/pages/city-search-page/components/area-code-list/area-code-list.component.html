@@ -1,4 +1,4 @@
 <div>
   area-code-list works!
-  <app-custom-list [items]="items"></app-custom-list>
+  <app-custom-list [items]="items" (selectionChange)="onSelectionChange($event)"></app-custom-list>
 </div>
