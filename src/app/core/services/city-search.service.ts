@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AreaCode } from '../models/city-search.model';
 
 /**
  * providedIn はサービス側から適用するモジュールを指定する
@@ -12,6 +13,6 @@ export class CitySearchService {
 
   // http://www.land.mlit.go.jp/webland/api.html
   getAreaCodeList() {
-    return this.http.get<{ code: string; japanese: string; english: string }[]>('assets/area-code-list.json');
+    return this.http.get<AreaCode[]>('assets/area-code-list.json');
   }
 }
