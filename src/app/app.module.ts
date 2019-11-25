@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core';
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
+import { AppStoreModule } from './app-store/app-store.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CoreModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, CoreModule, SharedModule, AppStoreModule],
   providers: [],
   bootstrap: [AppComponent]
 })
