@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CitySearchService } from 'src/app/core/services/city-search.service';
+import { CitySearchPageService } from './city-search-page.service';
 
 @Component({
   selector: 'app-city-search-page',
@@ -7,7 +7,7 @@ import { CitySearchService } from 'src/app/core/services/city-search.service';
   styleUrls: ['./city-search-page.component.scss']
 })
 export class CitySearchPageComponent implements OnInit {
-  constructor(private service: CitySearchService) {}
+  constructor(private service: CitySearchPageService) {}
 
   ngOnInit() {}
 }
