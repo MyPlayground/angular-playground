@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
@@ -9,11 +9,11 @@ const routes: Routes = [
   },
   {
     path: 'lazy',
-    loadChildren: './lazy/lazy.module#LazyModule'
+    loadChildren: () => import('./components/lazy/lazy.module').then(m => m.LazyModule)
   },
   {
     path: 'sandbox',
-    loadChildren: './sandbox/sandbox.module#SandboxModule'
+    loadChildren: () => import('./components/sandbox/sandbox.module').then(m => m.SandboxModule)
   },
   {
     path: '**',

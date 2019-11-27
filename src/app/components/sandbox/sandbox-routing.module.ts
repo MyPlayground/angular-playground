@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'city-search',
-    loadChildren: './pages/city-search-page/city-search-page.module#CitySearchPageModule'
+    loadChildren: () => import('./pages/city-search-page/city-search-page.module').then(m => m.CitySearchPageModule)
   }
 ];
 
