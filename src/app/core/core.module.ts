@@ -17,7 +17,11 @@ import { SessionEffects } from './store/effects/session.effects';
       }
     }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    EffectsModule.forRoot([SessionEffects])
+    EffectsModule.forRoot([SessionEffects]),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production
+    })
   ],
   providers: [CitySearchService],
   declarations: []
