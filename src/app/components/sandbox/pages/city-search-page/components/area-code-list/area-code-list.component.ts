@@ -3,6 +3,7 @@ import { CitySearchService } from 'src/app/core/services';
 import { CustomListOption } from 'src/app/shared/parts/custom-list/custom-list.model';
 import { map, flatMap, toArray } from 'rxjs/operators';
 import { of, from } from 'rxjs';
+import { CitySearchPageService } from '../../city-search-page.service';
 
 @Component({
   selector: 'app-area-code-list',
@@ -12,10 +13,10 @@ import { of, from } from 'rxjs';
 export class AreaCodeListComponent implements OnInit {
   items: CustomListOption[];
 
-  constructor(private service: CitySearchService) {}
+  constructor(private api: CitySearchService, private service: CitySearchPageService) {}
 
   ngOnInit() {
-    this.service
+    this.api
       .getAreaCodeList()
       .pipe(
         flatMap(value => from(value)),
@@ -28,7 +29,7 @@ export class AreaCodeListComponent implements OnInit {
   }
 
   onSelectionChange(value: string) {
-    // TODO: サービスへ通知
-    console.log(value);
+    // 通知
+    this.service.areaCode.next(value);
   }
 }
