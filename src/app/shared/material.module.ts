@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { MatDividerModule, MatListModule } from '@angular/material';
+import { MatDividerModule, MatListModule, MatButtonModule } from '@angular/material';
 
-const modules = [MatDividerModule, MatListModule];
+const modules = [MatDividerModule, MatListModule, MatButtonModule];
 
 @NgModule({
   declarations: [],
